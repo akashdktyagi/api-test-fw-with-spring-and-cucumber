@@ -5,7 +5,7 @@ Feature: My first feature
     Then Pet is created
 
   Scenario Outline: I want to get the pet with status as "<status>"
-    Given get pets are available
+    Given pets are available
     When I get the pet with status as "<status>"
     Then I get the list of pets with the status as "<status>"
 

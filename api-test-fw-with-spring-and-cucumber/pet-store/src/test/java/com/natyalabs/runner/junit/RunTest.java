@@ -1,4 +1,4 @@
-package com.natyalabs.runner;
+package com.natyalabs.runner.junit;
 
 import com.natyalabs.Main;
 import com.natyalabs.openapi.codegen.client.api.PetApi;
