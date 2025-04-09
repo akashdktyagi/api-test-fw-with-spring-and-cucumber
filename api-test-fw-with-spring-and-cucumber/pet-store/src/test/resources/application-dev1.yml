@@ -1,0 +1,8 @@
+api:
+  host: https://petstore.swagger.io/v2
+  username: ${petstoreapi.username:default_value}
+  password: ${petstoreapi.password:default_value}
+
+logging:
+  level:
+    com.natyalabs: DEBUG
