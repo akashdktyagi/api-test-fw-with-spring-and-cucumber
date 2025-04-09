@@ -11,25 +11,21 @@ import org.assertj.core.api.Assertions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-
 import java.util.List;
 
 public class StepDefs {
 
     Scenario scenario;
+    ResponseEntity<List<Pet>> responseEntityGetPet;
+    ResponseEntity<Void> responseEntityCreatePet;
 
     @Before
     public void setUp(Scenario scenario){
         this.scenario=scenario;
-
     }
 
     @Autowired PetApi apiClient;
     @Autowired Pet pet;
-
-    ResponseEntity<List<Pet>> responseEntityGetPet;
-
-    ResponseEntity<Void> responseEntityCreatePet;
 
     @Given("I have pet details")
     public void i_have_pet_details() {
@@ -57,7 +53,6 @@ public class StepDefs {
     @Then("I get the list of pets with the status as {string}")
     public void i_get_the_list_of_pets_with_the_status_as(String string) {
         Assertions.assertThat(responseEntityGetPet.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
-
     }
 
 }
